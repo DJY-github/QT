@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>frmSliderRange</class>
+ <widget class="QWidget" name="frmSliderRange">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="SliderRange" name="sliderRange1" native="true">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>9</y>
+     <width>482</width>
+     <height>71</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="SliderRange" name="sliderRange2" native="true">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>80</y>
+     <width>482</width>
+     <height>70</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="SliderRange" name="sliderRange3" native="true">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>150</y>
+     <width>482</width>
+     <height>71</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="SliderRange" name="sliderRange4" native="true">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>221</y>
+     <width>482</width>
+     <height>70</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>SliderRange</class>
+   <extends>QWidget</extends>
+   <header>sliderrange.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

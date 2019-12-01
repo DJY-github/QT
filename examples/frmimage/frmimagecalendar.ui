@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>frmImageCalendar</class>
+ <widget class="QWidget" name="frmImageCalendar">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>316</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="ImageCalendar" name="imageCalendar1" native="true">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>0</y>
+     <width>161</width>
+     <height>158</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="ImageCalendar" name="imageCalendar2" native="true">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>0</y>
+     <width>160</width>
+     <height>158</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="ImageCalendar" name="imageCalendar3" native="true">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>0</y>
+     <width>161</width>
+     <height>158</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="ImageCalendar" name="imageCalendar4" native="true">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>158</y>
+     <width>161</width>
+     <height>158</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="ImageCalendar" name="imageCalendar5" native="true">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>158</y>
+     <width>160</width>
+     <height>158</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="ImageCalendar" name="imageCalendar6" native="true">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>158</y>
+     <width>161</width>
+     <height>158</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ImageCalendar</class>
+   <extends>QWidget</extends>
+   <header>imagecalendar.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

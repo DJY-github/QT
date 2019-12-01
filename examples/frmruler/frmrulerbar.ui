@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>frmRulerBar</class>
+ <widget class="QWidget" name="frmRulerBar">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="RulerBar" name="rulerBar1" native="true"/>
+   </item>
+   <item>
+    <widget class="RulerBar" name="rulerBar2" native="true"/>
+   </item>
+   <item>
+    <widget class="RulerBar" name="rulerBar3" native="true"/>
+   </item>
+   <item>
+    <widget class="RulerBar" name="rulerBar4" native="true"/>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RulerBar</class>
+   <extends>QWidget</extends>
+   <header>rulerbar.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

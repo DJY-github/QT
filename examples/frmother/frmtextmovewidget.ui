@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>frmTextMoveWidget</class>
+ <widget class="QWidget" name="frmTextMoveWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>微软雅黑</family>
+    <pointsize>14</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="TextMoveWidget" name="textMoveWidget1"/>
+   </item>
+   <item>
+    <widget class="TextMoveWidget" name="textMoveWidget2"/>
+   </item>
+   <item>
+    <widget class="TextMoveWidget" name="textMoveWidget3">
+     <property name="mouseHoverStop">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TextMoveWidget</class>
+   <extends>QWidget</extends>
+   <header>textmovewidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

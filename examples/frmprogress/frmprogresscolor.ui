@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>frmProgressColor</class>
+ <widget class="QWidget" name="frmProgressColor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>501</width>
+     <height>251</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="ProgressColor" name="progressColor1" native="true"/>
+    </item>
+    <item>
+     <widget class="QSlider" name="horizontalSlider1">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="ProgressColor" name="progressColor2" native="true"/>
+    </item>
+    <item>
+     <widget class="QSlider" name="horizontalSlider2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="ProgressColor" name="progressColor3" native="true"/>
+    </item>
+    <item>
+     <widget class="QSlider" name="horizontalSlider3">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ProgressColor</class>
+   <extends>QWidget</extends>
+   <header>progresscolor.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>horizontalSlider1</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>progressColor1</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>45</x>
+     <y>53</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>45</x>
+     <y>38</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider2</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>progressColor2</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>141</x>
+     <y>117</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>141</x>
+     <y>100</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider3</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>progressColor3</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>184</x>
+     <y>196</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>181</x>
+     <y>165</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>frmImagePower</class>
+ <widget class="QWidget" name="frmImagePower">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="ImagePower" name="imagePower1" native="true">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>9</y>
+     <width>157</width>
+     <height>85</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="ImagePower" name="imagePower2" native="true">
+   <property name="geometry">
+    <rect>
+     <x>172</x>
+     <y>9</y>
+     <width>156</width>
+     <height>85</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="ImagePower" name="imagePower3" native="true">
+   <property name="geometry">
+    <rect>
+     <x>334</x>
+     <y>9</y>
+     <width>157</width>
+     <height>85</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="ImagePower" name="imagePower4" native="true">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>206</y>
+     <width>157</width>
+     <height>85</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="ImagePower" name="imagePower5" native="true">
+   <property name="geometry">
+    <rect>
+     <x>172</x>
+     <y>206</y>
+     <width>156</width>
+     <height>85</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="ImagePower" name="imagePower6" native="true">
+   <property name="geometry">
+    <rect>
+     <x>334</x>
+     <y>206</y>
+     <width>157</width>
+     <height>85</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ImagePower</class>
+   <extends>QWidget</extends>
+   <header>imagepower.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
