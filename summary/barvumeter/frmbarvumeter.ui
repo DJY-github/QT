@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>frmBarVUMeter</class>
+ <widget class="QWidget" name="frmBarVUMeter">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="BarVUMeter" name="barVUMeter1" native="true"/>
+   </item>
+   <item>
+    <widget class="BarVUMeter" name="barVUMeter2" native="true"/>
+   </item>
+   <item>
+    <widget class="BarVUMeter" name="barVUMeter3" native="true"/>
+   </item>
+   <item>
+    <widget class="BarVUMeter" name="barVUMeter4" native="true"/>
+   </item>
+   <item>
+    <widget class="BarVUMeter" name="barVUMeter5" native="true"/>
+   </item>
+   <item>
+    <widget class="BarVUMeter" name="barVUMeter6" native="true"/>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>BarVUMeter</class>
+   <extends>QWidget</extends>
+   <header>barvumeter.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

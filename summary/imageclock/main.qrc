@@ -1,0 +1,28 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/clock_flower.png</file>
+        <file>image/clock_flower_dot.png</file>
+        <file>image/clock_flower_h.png</file>
+        <file>image/clock_flower_highlights.png</file>
+        <file>image/clock_flower_m.png</file>
+        <file>image/clock_flower_s.png</file>
+        <file>image/clock_modern.png</file>
+        <file>image/clock_modern_dot.png</file>
+        <file>image/clock_modern_h.png</file>
+        <file>image/clock_modern_highlights.png</file>
+        <file>image/clock_modern_m.png</file>
+        <file>image/clock_modern_s.png</file>
+        <file>image/clock_system.png</file>
+        <file>image/clock_system_dot.png</file>
+        <file>image/clock_system_h.png</file>
+        <file>image/clock_system_highlights.png</file>
+        <file>image/clock_system_m.png</file>
+        <file>image/clock_system_s.png</file>
+        <file>image/clock_trad.png</file>
+        <file>image/clock_trad_dot.png</file>
+        <file>image/clock_trad_h.png</file>
+        <file>image/clock_trad_highlights.png</file>
+        <file>image/clock_trad_m.png</file>
+        <file>image/clock_trad_s.png</file>
+    </qresource>
+</RCC>

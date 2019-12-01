@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>frmAnimationButton</class>
+ <widget class="QWidget" name="frmAnimationButton">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="AnimationButton1" name="animationButton1" native="true">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>9</y>
+     <width>157</width>
+     <height>138</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="AnimationButton1" name="animationButton2" native="true">
+   <property name="geometry">
+    <rect>
+     <x>172</x>
+     <y>9</y>
+     <width>156</width>
+     <height>138</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="AnimationButton1" name="animationButton3" native="true">
+   <property name="geometry">
+    <rect>
+     <x>334</x>
+     <y>9</y>
+     <width>157</width>
+     <height>138</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="AnimationButton2" name="animationButton4" native="true">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>153</y>
+     <width>157</width>
+     <height>138</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="AnimationButton2" name="animationButton5" native="true">
+   <property name="geometry">
+    <rect>
+     <x>172</x>
+     <y>153</y>
+     <width>156</width>
+     <height>138</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="AnimationButton2" name="animationButton6" native="true">
+   <property name="geometry">
+    <rect>
+     <x>334</x>
+     <y>153</y>
+     <width>157</width>
+     <height>138</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>AnimationButton1</class>
+   <extends>QWidget</extends>
+   <header>animationbutton1.h</header>
+  </customwidget>
+  <customwidget>
+   <class>AnimationButton2</class>
+   <extends>QWidget</extends>
+   <header>animationbutton2.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

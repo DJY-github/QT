@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>frmColorStyle</class>
+ <widget class="QWidget" name="frmColorStyle">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="widgetBottom" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QWidget" name="widgetStyle" native="true">
+        <layout class="QGridLayout" name="gridLayout">
+         <property name="leftMargin">
+          <number>9</number>
+         </property>
+         <property name="topMargin">
+          <number>9</number>
+         </property>
+         <property name="rightMargin">
+          <number>9</number>
+         </property>
+         <property name="bottomMargin">
+          <number>9</number>
+         </property>
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="ColorStyle" name="colorStyle1" native="true"/>
+         </item>
+         <item row="0" column="1">
+          <widget class="ColorStyle" name="colorStyle2" native="true"/>
+         </item>
+         <item row="0" column="2">
+          <widget class="ColorStyle" name="colorStyle3" native="true"/>
+         </item>
+         <item row="0" column="3">
+          <widget class="ColorStyle" name="colorStyle4" native="true"/>
+         </item>
+         <item row="0" column="4">
+          <widget class="ColorStyle" name="colorStyle5" native="true"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="ColorStyle" name="colorStyle6" native="true"/>
+         </item>
+         <item row="1" column="1">
+          <widget class="ColorStyle" name="colorStyle7" native="true"/>
+         </item>
+         <item row="1" column="2">
+          <widget class="ColorStyle" name="colorStyle8" native="true"/>
+         </item>
+         <item row="1" column="3">
+          <widget class="ColorStyle" name="colorStyle9" native="true"/>
+         </item>
+         <item row="1" column="4">
+          <widget class="ColorStyle" name="colorStyle10" native="true"/>
+         </item>
+         <item row="2" column="0">
+          <widget class="ColorStyle" name="colorStyle11" native="true"/>
+         </item>
+         <item row="2" column="1">
+          <widget class="ColorStyle" name="colorStyle12" native="true"/>
+         </item>
+         <item row="2" column="2">
+          <widget class="ColorStyle" name="colorStyle13" native="true"/>
+         </item>
+         <item row="2" column="3">
+          <widget class="ColorStyle" name="colorStyle14" native="true"/>
+         </item>
+         <item row="2" column="4">
+          <widget class="ColorStyle" name="colorStyle15" native="true"/>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="widget" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="ColorStyle" name="colorStyle0" native="true">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>85</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>85</height>
+            </size>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <widget class="QLabel" name="labValue">
+              <property name="styleSheet">
+               <string notr="true">font: 75 12pt &quot;微软雅黑&quot;;
+color: rgb(255, 255, 255);</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <property name="spacing">
+            <number>6</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="labRed">
+             <property name="text">
+              <string>红色</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QSlider" name="sliderRed">
+             <property name="maximum">
+              <number>255</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="labGreen">
+             <property name="text">
+              <string>绿色</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QSlider" name="sliderGreen">
+             <property name="maximum">
+              <number>255</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="labBlue">
+             <property name="text">
+              <string>蓝色</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QSlider" name="sliderBlue">
+             <property name="maximum">
+              <number>255</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ColorStyle</class>
+   <extends>QWidget</extends>
+   <header>colorstyle.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
