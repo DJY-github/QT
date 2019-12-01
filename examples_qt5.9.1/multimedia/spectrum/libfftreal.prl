@@ -1,0 +1,6 @@
+QMAKE_PRL_BUILD_DIR = /srcdisk/weike/GITWorks/BC_U41X_BCLINUX/c.SYSKIT/lichee/uieng/qt-everywhere-opensource-src-5.9.1/qtmultimedia/examples/multimedia/spectrum/3rdparty/fftreal
+QMAKE_PRO_INPUT = fftreal.pro
+QMAKE_PRL_TARGET = libfftreal.so.1.0.0
+QMAKE_PRL_CONFIG = lex yacc depend_includepath testcase_targets import_plugins import_qpa_plugin qt_build_extra file_copies qmake_use qt warn_on release link_prl incremental cross_compile shared release linux unix posix gcc cross_compile compile_examples enable_new_dtags largefile neon nostrip prefix_build force_independent force_bootstrap utf8_source create_prl link_prl prepare_docs qt_docs_targets no_private_qt_headers_warning QTDIR_build qt_example_installs exceptions_off testcase_exceptions explicitlib install_ok have_target dll c++11 relative_qt_rpath thread opengl moc resources
+QMAKE_PRL_VERSION = 1.0.0
+QMAKE_PRL_LIBS = -L/lib -L/srcdisk/weike/GITWorks/BC_U41X_BCLINUX/c.SYSKIT/lichee/uieng/qt-everywhere-opensource-src-5.9.1/qtbase/lib -lQt5Gui -lQt5Core -lGLESv2 -lGLESv1_CM -lpthread

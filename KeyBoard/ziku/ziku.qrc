@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/ziku1">
+        <file>ziku.dat</file>
+    </qresource>
+</RCC>
