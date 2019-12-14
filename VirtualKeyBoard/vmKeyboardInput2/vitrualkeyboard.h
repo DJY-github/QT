@@ -2,7 +2,8 @@
 #define VITRUALKEYBOARD_H
 
 #include <QWidget>
-
+#include "testdialog.h"
+#include "testdialog2.h"
 namespace Ui {
 class vitrualkeyboard;
 }
@@ -22,6 +23,7 @@ private slots:
 
 private:
     Ui::vitrualkeyboard *ui;
+    testDialog *test;
 };
 
 #endif // VITRUALKEYBOARD_H

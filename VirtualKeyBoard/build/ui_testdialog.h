@@ -32,6 +32,7 @@ public:
         lineEdit = new QLineEdit(testDialog);
         lineEdit->setObjectName(QStringLiteral("lineEdit"));
         lineEdit->setGeometry(QRect(50, 60, 108, 25));
+        lineEdit->setFocusPolicy(Qt::ClickFocus);
 
         retranslateUi(testDialog);
 

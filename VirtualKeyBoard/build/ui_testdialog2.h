@@ -25,7 +25,7 @@ QT_BEGIN_NAMESPACE
 class Ui_testDialog2
 {
 public:
-    QWidget *widget;
+    QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QLineEdit *lineEdit_2;
     QLineEdit *lineEdit;
@@ -37,28 +37,31 @@ public:
         if (testDialog2->objectName().isEmpty())
             testDialog2->setObjectName(QStringLiteral("testDialog2"));
         testDialog2->resize(482, 300);
-        widget = new QWidget(testDialog2);
-        widget->setObjectName(QStringLiteral("widget"));
-        widget->setGeometry(QRect(20, 100, 344, 27));
-        horizontalLayout = new QHBoxLayout(widget);
+        testDialog2->setFocusPolicy(Qt::ClickFocus);
+        layoutWidget = new QWidget(testDialog2);
+        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
+        layoutWidget->setGeometry(QRect(20, 100, 344, 27));
+        horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        lineEdit_2 = new QLineEdit(widget);
+        lineEdit_2 = new QLineEdit(layoutWidget);
         lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
+        lineEdit_2->setFocusPolicy(Qt::ClickFocus);
 
         horizontalLayout->addWidget(lineEdit_2);
 
-        lineEdit = new QLineEdit(widget);
+        lineEdit = new QLineEdit(layoutWidget);
         lineEdit->setObjectName(QStringLiteral("lineEdit"));
+        lineEdit->setFocusPolicy(Qt::ClickFocus);
 
         horizontalLayout->addWidget(lineEdit);
 
-        label_2 = new QLabel(widget);
+        label_2 = new QLabel(layoutWidget);
         label_2->setObjectName(QStringLiteral("label_2"));
 
         horizontalLayout->addWidget(label_2);
 
-        label = new QLabel(widget);
+        label = new QLabel(layoutWidget);
         label->setObjectName(QStringLiteral("label"));
 
         horizontalLayout->addWidget(label);

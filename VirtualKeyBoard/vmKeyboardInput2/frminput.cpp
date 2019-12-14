@@ -235,6 +235,7 @@ bool frmInput::eventFilter(QObject *obj, QEvent *event)
             return true;
         } else {
             if (currentEditType == "QWidget") {
+                qDebug()<<"QWidget";
                 return false;
             }
             QString key;
@@ -278,7 +279,8 @@ void frmInput::reClicked()
 
 void frmInput::focusChanged(QWidget *oldWidget, QWidget *nowWidget)
 {
-    //qDebug() << "oldWidget:" << oldWidget << " nowWidget:" << nowWidget;
+    qDebug() << "oldWidget:" << oldWidget << " nowWidget:" << nowWidget<<"isFirst"<<isFirst;
+    qDebug()<<"is=="<<this->isAncestorOf(nowWidget);
     if (nowWidget != 0 && !this->isAncestorOf(nowWidget)) {
         //在Qt5和linux系统中(嵌入式linux除外),当输入法面板关闭时,焦点会变成无,然后焦点会再次移到焦点控件处
         //这样导致输入法面板的关闭按钮不起作用,关闭后马上有控件获取焦点又显示.
@@ -286,17 +288,18 @@ void frmInput::focusChanged(QWidget *oldWidget, QWidget *nowWidget)
         //这里又要多一个判断,万一首个窗体的第一个焦点就是落在可输入的对象中,则要过滤掉
 #ifndef __arm__
         if (oldWidget == 0x0 && !isFirst) {
+            qDebug()<<"return";
             return;
         }
 #endif
-
         isFirst = false;
         QWidget * pModalWidget = QApplication::activeModalWidget () ;
         QWidget * pPopupWidget = QApplication::activePopupWidget() ;
         QWidget * pWidget = QApplication::activeWindow() ;
-
+        qDebug()<<pModalWidget<<"===="<<pPopupWidget<<"=="<<pWidget;
         if (NULL != pModalWidget && pModalWidget->inherits("QDialog"))
         {
+            qDebug()<<"QDialog";
             Qt::WindowModality Modality = pModalWidget->windowModality();
           /*Qt::NonModal       The window is not modal and does not block input to other windows.
           非模态对话框
@@ -325,6 +328,8 @@ void frmInput::focusChanged(QWidget *oldWidget, QWidget *nowWidget)
         if (nowWidget->inherits("QLineEdit")) {
             currentLineEdit = (QLineEdit *)nowWidget;
             currentEditType = "QLineEdit";
+            qDebug()<<"QLineEdit";
+            this->setVisible(true);
             ShowPanel();
         } else if (nowWidget->inherits("QTextEdit")) {
             currentTextEdit = (QTextEdit *)nowWidget;

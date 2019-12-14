@@ -22,6 +22,9 @@
      <height>25</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
   </widget>
  </widget>
  <resources/>
