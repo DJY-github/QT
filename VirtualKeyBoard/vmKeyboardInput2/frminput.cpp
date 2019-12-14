@@ -31,7 +31,6 @@ void frmInput::Init(QString position, QString style, int btnFontSize, int labFon
 void frmInput::mouseMoveEvent(QMouseEvent *e)
 {
     if (mousePressed && (e->buttons() && Qt::LeftButton)) {
-        //qDebug()<<"globalpos="<<e->globalPos()<<"mousePoint="<<mousePoint;
         this->move(e->globalPos() - mousePoint);
         e->accept();
     }
@@ -41,7 +40,6 @@ void frmInput::mousePressEvent(QMouseEvent *e)
 {
     if (e->button() == Qt::LeftButton) {
         mousePressed = true;
-        //qDebug()<<"globalpos="<<e->globalPos()<<"pos="<<this->pos();
         mousePoint = e->globalPos() - this->pos();
         e->accept();
     }
@@ -61,24 +59,9 @@ void frmInput::InitForm()
 
     deskWidth = w.availableGeometry().width();
     deskHeight = w.availableGeometry().height();
-    //qDebug()<<"width2="<<w.screenGeometry().width()<<"height2="<< w.screenGeometry().height();
+
     frmWidth = this->width();
     frmHeight = this->height();
-    //qDebug()<<"width1="<<frmWidth<<"height1="<< frmHeight;
-
-    QSqlDatabase DbConn;
-    DbConn = QSqlDatabase::addDatabase("QSQLITE");
-    qDebug()<<"applicationDirPath:"<<qApp->applicationDirPath();
-    DbConn.setDatabaseName(qApp->applicationDirPath() + "/pinyin.db");
-//    DbConn.setDatabaseName(":/db/pinyin.db");
-//    DbConn.setDatabaseName("c:/pinyin.db");
-    bool isSuccess = DbConn.open();
-    if(!isSuccess)
-    {
-        qDebug()<<DbConn.lastError().text();
-        qDebug("DbConn.open failed");
-    }
-
     isFirst = true;
     isPress = false;
     timerPress = new QTimer(this);
@@ -187,19 +170,6 @@ void frmInput::InitProperty()
     ui->btny->setProperty("btnLetter", true);
     ui->btnz->setProperty("btnLetter", true);
 
-    labCh.append(ui->labCh0);
-    labCh.append(ui->labCh1);
-    labCh.append(ui->labCh2);
-    labCh.append(ui->labCh3);
-    labCh.append(ui->labCh4);
-    labCh.append(ui->labCh5);
-    labCh.append(ui->labCh6);
-    labCh.append(ui->labCh7);
-    labCh.append(ui->labCh8);
-    labCh.append(ui->labCh9);
-    for (int i = 0; i < 10; i++) {
-        labCh[i]->installEventFilter(this);
-    }
 }
 
 void frmInput::ShowPanel()
@@ -207,43 +177,23 @@ void frmInput::ShowPanel()
     //
     this->setVisible(true);
 
-    int width = ui->btn0->width();
-    qDebug()<<"begin="<<width;
-    width = width > 40 ? width : 40;
-    qDebug()<<"end="<<width;
-    ui->btnPre->setMinimumWidth(width);
-    ui->btnPre->setMaximumWidth(width);
-    ui->btnNext->setMinimumWidth(width);
-    ui->btnNext->setMaximumWidth(width);
-    ui->btnClose->setMinimumWidth(width);
-    ui->btnClose->setMaximumWidth(width);
+//    int width = ui->btn0->width();
+//    qDebug()<<"begin="<<width;
+//    width = width > 40 ? width : 40;
+//    qDebug()<<"end="<<width;
+//    ui->btnPre->setMinimumWidth(width);
+//    ui->btnPre->setMaximumWidth(width);
+//    ui->btnNext->setMinimumWidth(width);
+//    ui->btnNext->setMaximumWidth(width);
+//    ui->btnClose->setMinimumWidth(width);
+//    ui->btnClose->setMaximumWidth(width);
 }
 
 //事件过滤器,用于识别鼠标单击汉字标签处获取对应汉字
 bool frmInput::eventFilter(QObject *obj, QEvent *event)
 {
     if (event->type() == QEvent::MouseButtonPress) {
-        if (obj == ui->labCh0) {
-            setChinese(0);
-        } else if (obj == ui->labCh1) {
-            setChinese(1);
-        } else if (obj == ui->labCh2) {
-            setChinese(2);
-        } else if (obj == ui->labCh3) {
-            setChinese(3);
-        } else if (obj == ui->labCh4) {
-            setChinese(4);
-        } else if (obj == ui->labCh5) {
-            setChinese(5);
-        } else if (obj == ui->labCh6) {
-            setChinese(6);
-        } else if (obj == ui->labCh7) {
-            setChinese(7);
-        } else if (obj == ui->labCh8) {
-            setChinese(8);
-        } else if (obj == ui->labCh9) {
-            setChinese(9);
-        } else if (currentEditType != "" && obj != ui->btnClose) {
+        if (currentEditType != "" && obj != ui->btnClose) {
             ShowPanel();
         }
         btnPress = (QPushButton *)obj;
@@ -266,21 +216,7 @@ bool frmInput::eventFilter(QObject *obj, QEvent *event)
         }
 
         QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
-        //Shift切换输入法模式,esc键关闭输入法面板,空格取第一个汉字,退格键删除
-        //中文模式下回车键取拼音,中文模式下当没有拼音时可以输入空格
-        if (keyEvent->key() == Qt::Key_Space) {
-            if (ui->labPY->text() != "") {
-                setChinese(0);
-                return true;
-            } else {
-                return false;
-            }
-        } else if (keyEvent->key() == Qt::Key_Return || keyEvent->key() == Qt::Key_Enter) {
-            insertValue(ui->labPY->text());
-            ui->labPY->setText("");
-            selectChinese();
-            return true;
-        } else if (keyEvent->key() == Qt::Key_Shift) {
+        if (keyEvent->key() == Qt::Key_Shift) {
             ui->btnType->click();
             return true;
         } else if (keyEvent->key() == Qt::Key_Escape) {
@@ -289,20 +225,6 @@ bool frmInput::eventFilter(QObject *obj, QEvent *event)
         } else if (keyEvent->key() == Qt::Key_Backspace) {
             ui->btnDelete->click();
             return true;
-        } else if (keyEvent->text() == "+" || keyEvent->text() == "=") {
-            if (ui->labPY->text() != "") {
-                ui->btnNext->click();
-                return true;
-            } else {
-                return false;
-            }
-        } else if (keyEvent->text() == "-" || keyEvent->text() == "_") {
-            if (ui->labPY->text() != "") {
-                ui->btnPre->click();
-                return true;
-            } else {
-                return false;
-            }
         } else if (keyEvent->key() == Qt::Key_CapsLock) {
             if (currentType != "max") {
                 currentType = "max";
@@ -316,9 +238,7 @@ bool frmInput::eventFilter(QObject *obj, QEvent *event)
                 return false;
             }
             QString key;
-            if (currentType == "chinese") {
-                key = keyEvent->text();
-            } else if (currentType == "min") {
+            if (currentType == "min") {
                 key = keyEvent->text().toLower();
             } else if (currentType == "max") {
                 key = keyEvent->text().toUpper();
@@ -467,7 +387,6 @@ void frmInput::changeType(QString type)
     if (type == "max") {
         changeLetter(true);
         ui->btnType->setText("大写");
-        ui->labInfo->setText("中文输入法--大写");
         ui->btnOther12->setText("/");
         ui->btnOther14->setText(":");
         ui->btnOther17->setText(",");
@@ -476,25 +395,15 @@ void frmInput::changeType(QString type)
     } else if (type == "min") {
         changeLetter(false);
         ui->btnType->setText("小写");
-        ui->labInfo->setText("中文输入法--小写");
         ui->btnOther12->setText("/");
         ui->btnOther14->setText(":");
         ui->btnOther17->setText(",");
         ui->btnOther18->setText("\\");
         ui->btnOther21->setText("\"");
-    } else {
-        changeLetter(false);
-        ui->btnType->setText("中文");
-        ui->labInfo->setText("中文输入法--中文");
-        ui->btnOther12->setText("。");
-        ui->btnOther14->setText("：");
-        ui->btnOther17->setText("，");
-        ui->btnOther18->setText("；");
-        ui->btnOther21->setText("“");
     }
     //每次切换到模式,都要执行清空之前中文模式下的信息
-    clearChinese();
-    ui->labPY->setText("");
+    //clearChinese();
+    //ui->labPY->setText("");
 }
 
 void frmInput::changeLetter(bool isUpper)
@@ -509,50 +418,6 @@ void frmInput::changeLetter(bool isUpper)
             }
         }
     }
-}
-
-void frmInput::selectChinese()
-{
-    clearChinese();
-    QSqlQuery query;
-    QString currentPY = ui->labPY->text();
-//    QString sql = "select [word] from [pinyin] where [pinyin]='" + currentPY + "';";
-    QString sql = "select [chinese] from [hzpy] where [pinyin]='" + currentPY + "'order by type desc;";
-    query.exec(sql);
-    //逐个将查询到的字词加入汉字队列
-    while(query.next()) {
-        QString result = query.value(0).toString();
-        QStringList text = result.split(" ");
-        foreach (QString txt, text) {
-            if (txt.length() > 0) {
-                allPY.append(txt);
-                currentPY_count++;
-            }
-        }
-    }
-    showChinese();
-}
-
-void frmInput::showChinese()
-{
-    //每个版面最多显示10个汉字
-    int count = 0;
-    currentPY.clear();
-    for (int i = 0; i < 10; i++) {
-        labCh[i]->setText("");
-    }
-
-    for (int i = currentPY_index; i < currentPY_count; i++) {
-        if (count == 10) {
-            break;
-        }
-        QString txt = QString("%1.%2").arg(count).arg(allPY[currentPY_index]);
-        currentPY.append(allPY[currentPY_index]);
-        labCh[count]->setText(txt);
-        count++;
-        currentPY_index++;
-    }
-    //qDebug() << "currentPY_index:" << currentPY_index << "currentPY_count:" << currentPY_count;
 }
 
 void frmInput::btn_clicked()
@@ -574,35 +439,7 @@ void frmInput::btn_clicked()
         }
         changeType(currentType);
     } else if (objectName == "btnDelete") {
-        //如果当前是中文模式,则删除对应拼音,删除完拼音之后再删除对应文本输入框的内容
-        if (currentType == "chinese") {
-            QString txt = ui->labPY->text();
-            int len = txt.length();
-            if (len > 0) {
-                ui->labPY->setText(txt.left(len - 1));
-                selectChinese();
-            } else {
-                deleteValue();
-            }
-        } else {
-            deleteValue();
-        }
-    } else if (objectName == "btnPre") {
-        if (currentPY_index >= 20) {
-            //每次最多显示10个汉字,所以每次向前的时候索引要减20
-            if (currentPY_index % 10 == 0) {
-                currentPY_index -= 20;
-            } else {
-                currentPY_index = currentPY_count - (currentPY_count % 10) - 10;
-            }
-        } else {
-            currentPY_index = 0;
-        }
-        showChinese();
-    } else if (objectName == "btnNext") {
-        if (currentPY_index < currentPY_count - 1) {
-            showChinese();
-        }
+        deleteValue();
     } else if (objectName == "btnClose") {
         this->setVisible(false);
     } else if (objectName == "btnSpace") {
@@ -613,44 +450,9 @@ void frmInput::btn_clicked()
         if (objectName == "btnOther7") {
             value = value.right(1);
         }
-        //当前不是中文模式,则单击按钮对应text为传递参数
-        if (currentType != "chinese") {
-            insertValue(value);
-        } else {
-            //中文模式下,不允许输入特殊字符,单击对应数字按键取得当前索引的汉字
-            if (btn->property("btnOther").toBool()) {
-                if (ui->labPY->text().length() == 0) {
-                    insertValue(value);
-                }
-            } else if (btn->property("btnNum").toBool()) {
-                if (ui->labPY->text().length() == 0) {
-                    insertValue(value);
-                } else if (objectName == "btn0") {
-                    setChinese(0);
-                } else if (objectName == "btn1") {
-                    setChinese(1);
-                } else if (objectName == "btn2") {
-                    setChinese(2);
-                } else if (objectName == "btn3") {
-                    setChinese(3);
-                } else if (objectName == "btn4") {
-                    setChinese(4);
-                } else if (objectName == "btn5") {
-                    setChinese(5);
-                } else if (objectName == "btn6") {
-                    setChinese(6);
-                } else if (objectName == "btn7") {
-                    setChinese(7);
-                } else if (objectName == "btn8") {
-                    setChinese(8);
-                } else if (objectName == "btn9") {
-                    setChinese(9);
-                }
-            } else if (btn->property("btnLetter").toBool()) {
-                ui->labPY->setText(ui->labPY->text() + value);
-                selectChinese();
-            }
-        }
+
+        insertValue(value);
+
     }
 }
 
@@ -704,28 +506,7 @@ void frmInput::deleteValue()
     }
 }
 
-void frmInput::setChinese(int index)
-{
-    int count = currentPY.count();
-    if (count > index) {
-        insertValue(currentPY[index]);
-        //添加完一个汉字后,清空当前汉字信息,等待重新输入
-        clearChinese();
-        ui->labPY->setText("");
-    }
-}
 
-void frmInput::clearChinese()
-{
-    //清空汉字,重置索引
-    for (int i = 0; i < 10; i++) {
-        labCh[i]->setText("");
-    }
-    allPY.clear();
-    currentPY.clear();
-    currentPY_index = 0;
-    currentPY_count = 0;
-}
 
 void frmInput::ChangeStyle()
 {
@@ -762,8 +543,7 @@ void frmInput::ChangeFont()
     foreach (QLabel * lab, labs) {
         lab->setFont(labFont);
     }
-    ui->btnPre->setFont(labFont);
-    ui->btnNext->setFont(labFont);
+
     ui->btnClose->setFont(labFont);
 }
 
