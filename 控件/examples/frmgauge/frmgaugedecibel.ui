@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>frmGaugeDecibel</class>
+ <widget class="QWidget" name="frmGaugeDecibel">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="GaugeDecibel" name="gaugeDecibel" native="true"/>
+   </item>
+   <item>
+    <widget class="QSlider" name="horizontalSlider">
+     <property name="maximum">
+      <number>150</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>GaugeDecibel</class>
+   <extends>QWidget</extends>
+   <header>gaugedecibel.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>frmRulerLine</class>
+ <widget class="QWidget" name="frmRulerLine">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="RulerLine" name="rulerLine1" native="true">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>9</y>
+     <width>482</width>
+     <height>126</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="RulerLine" name="rulerLine2" native="true">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>141</y>
+     <width>482</width>
+     <height>125</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QSlider" name="horizontalSlider">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>272</y>
+     <width>481</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>100</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RulerLine</class>
+   <extends>QWidget</extends>
+   <header>rulerline.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>frmProgressPlay</class>
+ <widget class="QWidget" name="frmProgressPlay">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="ProgressPlay" name="progressPlay1" native="true">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>481</width>
+     <height>16</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="ProgressPlay" name="progressPlay2" native="true">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>30</y>
+     <width>481</width>
+     <height>16</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="ProgressPlay" name="progressPlay3" native="true">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>50</y>
+     <width>481</width>
+     <height>16</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="ProgressPlay" name="progressPlay4" native="true">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>70</y>
+     <width>481</width>
+     <height>16</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>90</y>
+     <width>481</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QSlider" name="horizontalSlider1">
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="value">
+       <number>100</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLabel" name="labValueAll">
+      <property name="minimumSize">
+       <size>
+        <width>80</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="text">
+       <string>总大小: 100</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QSlider" name="horizontalSlider2">
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="value">
+       <number>20</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLabel" name="labValuePlay">
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="text">
+       <string>已播放: 20</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QSlider" name="horizontalSlider3">
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="value">
+       <number>50</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLabel" name="labValueLoad">
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="text">
+       <string>已缓存: 50</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ProgressPlay</class>
+   <extends>QWidget</extends>
+   <header>progressplay.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

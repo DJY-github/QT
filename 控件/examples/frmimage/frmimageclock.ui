@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>frmImageClock</class>
+ <widget class="QWidget" name="frmImageClock">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="ImageClock" name="imageClock1" native="true">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>9</y>
+     <width>238</width>
+     <height>138</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="ImageClock" name="imageClock2" native="true">
+   <property name="geometry">
+    <rect>
+     <x>253</x>
+     <y>9</y>
+     <width>238</width>
+     <height>138</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="ImageClock" name="imageClock3" native="true">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>153</y>
+     <width>238</width>
+     <height>138</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="ImageClock" name="imageClock4" native="true">
+   <property name="geometry">
+    <rect>
+     <x>253</x>
+     <y>153</y>
+     <width>238</width>
+     <height>138</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ImageClock</class>
+   <extends>QWidget</extends>
+   <header>imageclock.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

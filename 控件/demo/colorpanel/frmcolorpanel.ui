@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>frmColorPanel</class>
+ <widget class="QWidget" name="frmColorPanel">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>650</width>
+    <height>450</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_4">
+   <item>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="pageFader">
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="ColorPanelFader" name="colorPanelFader">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pageHSB">
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="ColorPanelHSB" name="colorPanelHSB"/>
+       </item>
+       <item>
+        <widget class="ColorPanelBar" name="colorPanelBar">
+         <property name="minimumSize">
+          <size>
+           <width>60</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>60</width>
+           <height>16777215</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pageBtn">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="ColorPanelBtn" name="colorPanelBtn">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="widgetColor" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>45</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>45</height>
+      </size>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>1</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="WKButton" name="btnHue"/>
+      </item>
+      <item>
+       <widget class="WKButton" name="btnSat"/>
+      </item>
+      <item>
+       <widget class="WKButton" name="btnBright"/>
+      </item>
+      <item>
+       <widget class="WKButton" name="btnCyan"/>
+      </item>
+      <item>
+       <widget class="WKButton" name="btnMagenta"/>
+      </item>
+      <item>
+       <widget class="WKButton" name="btnYellow"/>
+      </item>
+      <item>
+       <widget class="WKButton" name="btnRed"/>
+      </item>
+      <item>
+       <widget class="WKButton" name="btnGreen"/>
+      </item>
+      <item>
+       <widget class="WKButton" name="btnBlue"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="widgetPanel" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>50</height>
+      </size>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <property name="spacing">
+       <number>1</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="WKButton" name="btnPanelFader"/>
+      </item>
+      <item>
+       <widget class="WKButton" name="btnPanelHSB"/>
+      </item>
+      <item>
+       <widget class="WKButton" name="btnPanelBtn"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="labColor">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>ColorPanelBar</class>
+   <extends>QWidget</extends>
+   <header>colorpanelbar.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ColorPanelFader</class>
+   <extends>QWidget</extends>
+   <header>colorpanelfader.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ColorPanelHSB</class>
+   <extends>QWidget</extends>
+   <header>colorpanelhsb.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ColorPanelBtn</class>
+   <extends>QWidget</extends>
+   <header>colorpanelbtn.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>WKButton</class>
+   <extends>QWidget</extends>
+   <header>wkbutton.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

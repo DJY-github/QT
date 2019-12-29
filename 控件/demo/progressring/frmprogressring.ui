@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>frmProgressRing</class>
+ <widget class="QWidget" name="frmProgressRing">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="ProgressRing" name="progressRing1" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="ProgressRing" name="progressRing2" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="ProgressRing" name="progressRing3" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="ProgressRing" name="progressRing4" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="ProgressRing" name="progressRing5" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="ProgressRing" name="progressRing6" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="3">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QCheckBox" name="ckAnimation">
+       <property name="text">
+        <string>动画</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="ckClockWise">
+       <property name="text">
+        <string>顺时针</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="labStartAngle">
+       <property name="text">
+        <string>起始角度</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="cboxStartAngle">
+       <item>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>45</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>90</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>135</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>180</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>225</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>270</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>315</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>360</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="horizontalSlider">
+       <property name="maximum">
+        <number>100</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ProgressRing</class>
+   <extends>QWidget</extends>
+   <header>progressring.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

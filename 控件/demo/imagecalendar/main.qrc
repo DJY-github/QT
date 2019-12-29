@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/calendar_bg_blue.png</file>
+        <file>image/calendar_bg_brown.png</file>
+        <file>image/calendar_bg_gray.png</file>
+        <file>image/calendar_bg_purple.png</file>
+        <file>image/calendar_bg_red.png</file>
+        <file>image/calendar_bg_yellow.png</file>
+    </qresource>
+</RCC>
