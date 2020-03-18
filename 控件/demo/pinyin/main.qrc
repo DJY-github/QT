@@ -1,7 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>image/pinyin_fanti.txt</file>
-        <file>image/pinyin_group.txt</file>
-        <file>image/pinyin_one.txt</file>
-    </qresource>
-</RCC>
